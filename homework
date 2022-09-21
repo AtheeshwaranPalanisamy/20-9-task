@@ -1,0 +1,32 @@
+//Write a JavaScript function to generate an array between two integers of 1 step length.
+
+//function
+function foo(starting, ending) 
+{
+ //condition checking 
+		if (starting > ending) {
+			var arr1 = new Array(starting- ending + 1);
+			for (var i = 0; i < arr1.length; i++, starting--)
+      {
+				arr1[i] = starting--;
+			}
+      //return for getting processed result takeout in arr1
+			return arr1;
+		} 
+       else 
+       {
+       //printing range between required numbers 
+       //and false condtions of the if condtion checking area enter into here
+			var arr2 = new Array(ending-starting+1);
+         
+		for (var k = 0; k < arr2.length; k++, starting++) 
+        {
+			arr2[k] = starting;
+		}
+    //return for getting processed result takeout in arr2
+      		return arr2;
+		}
+	}
+//what we need
+console.log(foo(3, 7));
+console.log(foo(-4, 7));
